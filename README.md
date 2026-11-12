@@ -1,7 +1,7 @@
 # bookbot
 
-BookBot is my first [Boot.dev](https://www.boot.dev) project!
+BookBot Checker for checking every words in a specific book
 
 ## To get into the file, input these commands:
 
-___cd ~/.local/opt/go/bin
+___cd ~/.local/opt/go/bin___
