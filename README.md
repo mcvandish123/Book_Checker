@@ -2,6 +2,5 @@
 
 BookBot Checker for checking every words in a specific book
 
-## To get into the file, input these commands:
-
-___cd ~/.local/opt/go/bin___
+## INPUTS
+_python3 main.py <path_of_book>_
