@@ -1,8 +1,14 @@
 from stats import book_string, get_book_text, book_count_text, chars_dict_to_sorted_list
+import sys
 
 def main():
-	text_path = "./books/frankenstein.txt"
-	text = get_book_text("./books/frankenstein.txt")
+	
+	if len(sys.argv) < 2:
+		print("Usage: python3 main.py <path_to_book>")
+		sys.exit(1)
+	
+	text_path = sys.argv[1]
+	text = get_book_text(text_path)
 	
 	how_many = book_string(text)
 	
