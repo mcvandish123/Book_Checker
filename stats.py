@@ -3,8 +3,7 @@ def get_book_text(path):
 		return f.read()
 
 def book_string(text) -> str:
-	num_words = len(text.split())
-	return f"Found {num_words} total words"
+	return len(text.split())
 
 def book_count_text(text) -> dict[str, int]:
 	words = {}
@@ -15,3 +14,17 @@ def book_count_text(text) -> dict[str, int]:
 		else:
 			words[char] = 1
 	return words
+
+def sort_on(counted: tuple[str, int]) -> int:
+	return counted[1]
+
+def chars_dict_to_sorted_list(value: dict[str, int]) -> list[tuple[str, int]]:
+	list = []
+
+	for chars in value:
+		count = value[chars]
+		list.append((chars, count))
+
+	sort_highest = sorted(list, key=sort_on, reverse=True)
+	
+	return sort_highest 
